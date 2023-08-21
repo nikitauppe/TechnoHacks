@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: rgb(200,200,200); */
+    background-color: 	#f4f4f4;
+    font-weight: 400;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: grid;
+    margin-top: 60px;
+    grid-template-rows: minmax(8px, auto);
+    grid-template-rows: repeat(5, 65px);
+
+    grid-template-columns: repeat(4, 65px);
+    justify-content: center;
+    background-color: hsl(220,6%,0%);
+    /* background-color: #008080; */
+    padding: 1.4rem;
+    border-radius: 12px;
+    gap: 0.7rem;
+}
+.calculator button{
+    border: none;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: hsl(230,6%,20%);
+    /* background-color: #008080; */
+    color: hsl(204,100%,58%);
+}
+.calculator button:hover, button.loyal{
+    background-color: hsl(230,6%,30%);
+
+}
+.bigspan{
+    grid-column: span 2;
+}
+.calculator > .output{
+    font-size: 2rem;
+    color: white;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-break: break-all;
+    border-radius: inherit;
+}
+h3{
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.output .prev-display{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: hsl(0,0%,65%);
+}
+.equal{
+    height: 60px;
+}
+.loyal{
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+}
+.footer{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.personal{
+    /* position: relative; */
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    padding: 10px;
+    background-color: inherit;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: blue;
+}
+.footer button::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #2bd576;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+.footer button:hover::after{
+    transform: scaleX(1);
+}
+p{
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
